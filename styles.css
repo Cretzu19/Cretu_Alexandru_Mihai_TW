@@ -1,0 +1,168 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+
+}
+
+header {
+  background-color: #129490;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #E0A890;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+nav a:hover {
+  color: #CE1483; 
+}
+
+main {
+  padding: 2rem;
+  flex: 1;
+}
+
+.section {
+  background-color: white;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #70B77E;
+}
+
+footer {
+  background-color: #065143;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #129490;
+  color: white;
+  text-align: center;
+}
+
+.welcome-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.welcome-container button {
+  background-color: #E0A890;
+  color: #065143;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.welcome-container button:hover {
+  background-color: #CE1483;
+  color: white;
+}
+
+
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #129490; /* Dark Cyan */
+  color: white;
+  text-align: center;
+}
+
+.login-box {
+  background-color: white;
+  color: #065143; /* Brunswick Green */
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 320px;
+}
+
+.login-box h2 {
+  margin-bottom: 1rem;
+  color: #129490;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #70B77E; /* Emerald */
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #E0A890; /* Buff */
+  color: #065143;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #CE1483; /* Red Violet */
+  color: white;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #70B77E;
+  margin: 2rem 0;
+}
