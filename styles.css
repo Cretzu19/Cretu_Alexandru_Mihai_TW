@@ -1,0 +1,567 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh;  
+  z-index:1;
+  background-image: url('photos/event_horizon.jpg') ;
+  background-size:cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #70B77E;
+}
+
+header {
+  background-color: #129490;
+  color: white;
+  padding: 1rem 2rem;
+  z-index: 2;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #E0A890;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+nav a:hover {
+  color: #CE1483; 
+}
+
+main {
+  padding: 2rem;
+  flex: 1;
+}
+
+.section {
+  background-color: white;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #129490;
+  z-index:2 ;
+  position: relative;
+  background-color: rgba(0,0,0,0.6);
+}
+
+footer {
+  background-color: #065143;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  z-index:2 ;
+}
+
+.events-section h2 {
+    font-size: 2rem;
+    color: #70B77E;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #129490;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+.event-photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+/* Styling for Individual Event Cards */
+.event-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #70B77E;
+    text-align: center;
+}
+
+/* Styling for the Photo Placeholder */
+.photo-placeholder {
+    width: 100%;
+    padding-bottom: 70%;
+    background-color: #f9f9f9;
+    border: 2px dashed #129490;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.event-card h3 {
+    color: #065143;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.event-card p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* --- Basic Responsiveness --- */
+@media (max-width: 768px) {
+    .event-photos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .event-photos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/*==========================WELCOME PAGE===================*/
+
+.welcome-container {
+  position: relative;
+  z-index:2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+.welcome-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.welcome-container button {
+  background-color: #E0A890;
+  color: #065143;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.welcome-container button:hover {
+  background-color: #CE1483;
+  color: white;
+}
+/*=======================CONTACT PAGE==================*/
+
+.contact-section h2 {
+    color: #129490;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-intro {
+    font-size: 1.1em;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    color: white;
+    line-height: 1.6;
+    border-left: 4px solid #70B77E;
+    padding-left: 1rem;
+}
+
+.contact-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #065143;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    font-size: 1.05em;
+    color: white;
+}
+
+.contact-list li strong {
+    display: block;
+    color: #E0A890;
+    margin-bottom: 0.25rem;
+}
+
+.contact-list li a {
+    color: #70B77E; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-list li a:hover {
+    color: #CE1483;
+}
+
+/*=======================CONTACT PAGE==================*/
+
+.contact-section h2 {
+    color: #129490;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-intro {
+    font-size: 1.1em;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    color: white;
+    line-height: 1.6;
+    border-left: 4px solid #70B77E;
+    padding-left: 1rem;
+}
+
+.contact-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #065143;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    font-size: 1.05em;
+    color: white;
+}
+
+.contact-list li strong {
+    display: block;
+    color: #E0A890;
+    margin-bottom: 0.25rem;
+}
+
+.contact-list li a {
+    color: #70B77E; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-list li a:hover {
+    color: #CE1483;
+}
+
+
+
+
+/*=======================LOGIN PAGE==================*/
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #129490;
+  color: white;
+  text-align: center;
+
+}
+
+.login-box {
+  background-color: rgba(255,255,255,0.9);
+  color: #065143; 
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 320px;  
+  z-index:2;
+  position: relative;
+}
+
+.login-box h2 {
+  margin-bottom: 1rem;
+  color: #129490;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #70B77E; /* Emerald */
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #E0A890; /* Buff */
+  color: #065143;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #CE1483; /* Red Violet */
+  color: white;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #70B77E;
+  margin: 2rem 0;
+}
+
+/*=======================PROFILE PAGE==================*/
+
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 2; 
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.avatar-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #E0A890;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    border: 5px solid #129490;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #065143;
+}
+
+.profile-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-since {
+    font-size: 1em;
+    color: #70B77E;
+}
+
+.profile-info h3, 
+.recent-activity h3, 
+.settings-options h3 {
+    color: #129490;
+    border-bottom: 1px solid #70B77E;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.profile-info p {
+    margin: 0.5rem 0;
+    color: white;
+}
+.profile-info strong {
+    color: #E0A890;
+}
+
+/* Edit Button */
+.edit-button {
+    background-color: #CE1483;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1rem;
+    display: block;
+}
+
+.edit-button:hover {
+    background-color: #E0A890; 
+    color: #065143;
+}
+
+/* Recent Activity List */
+.recent-activity ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activity li {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid #70B77E;
+    border-radius: 4px;
+}
+
+/* Settings Links */
+.setting-link {
+    display: block;
+    padding: 0.75rem 0;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: #E0A890;
+    border-bottom: 1px dashed rgba(112, 183, 126, 0.5);
+    transition: 0.3s;
+}
+
+.setting-link:hover {
+    color: #CE1483;
+    padding-left: 5px;
+}
+
+.logout-link {
+    color: #CE1483; 
+    font-weight: bold;
+}
+
+
+
+/*=======================EVENTS LIST PAGE (SIMPLIFIED) ===================*/
+
+.events-page-section h2 {
+    color: #129490;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.event-listings-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-listing {
+    display: flex;
+    background-color: rgba(0,0,0,0.7);
+    border: 1px solid #70B77E;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.event-banner {
+    width: 80px;
+    flex-shrink: 0;
+    background-color: #E0A890;
+    color: #065143;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.banner-day {
+    font-size: 2em;
+    line-height: 1;
+}
+
+.event-details {
+    padding: 1rem;
+    flex-grow: 1;
+    color: white;
+}
+
+.event-details h3 {
+    color: #129490;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+.event-details p {
+    margin: 0.25rem 0;
+    font-size: 0.9em;
+}
+
+.event-details strong {
+    color: #70B77E;
+}
+
+.view-details-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #CE1483;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .event-listing {
+        flex-direction: column;
+    }
+    .event-banner {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.5rem 0;
+    }
+    .banner-day {
+        font-size: 1.5em;
+    }
+    .event-details {
+        padding: 1rem;
+        text-align: center;
+    }
+}
